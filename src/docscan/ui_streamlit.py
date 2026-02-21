@@ -211,8 +211,6 @@ def render_app() -> None:
         if not ocrmypdf_available():
             st.caption("OCR no disponible en este entorno (falta ocrmypdf/tesseract/ghostscript).")
 
-    st.caption("Tip: podés reordenar y borrar páginas en **Páginas**.")
-
     # Firma para invalidaciones
 
     current_sig = (
@@ -243,7 +241,7 @@ def render_app() -> None:
     # ---------------------------
     # Páginas (miniaturas + ordenar + borrar)
     # ---------------------------
-    with st.expander("📑 Páginas (ordenar y borrar)", expanded=False):
+    with st.expander("🔍 Vista previa", expanded=False):
         if not uploads:
             st.info("Subí archivos para ver las páginas.")
         else:

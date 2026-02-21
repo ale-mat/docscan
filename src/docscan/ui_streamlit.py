@@ -420,6 +420,8 @@ def render_app() -> None:
         ss.out_bytes = out_bytes
         ss.last_sig = current_sig
 
+        st.success("✅ Listo. Ahora descargá el PDF para terminar.", icon=None)
+
 
     # ---------------------------
     # Resultado + descarga

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docscan"
+version = "0.1.0"
+description = "Suite para simular escaneo y procesamiento de documentos en PDF."
+readme = "README.md"
+authors = [
+  { name="ale-mat" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
+dependencies = [
+  "streamlit",
+  "pillow",
+  "numpy",
+  "opencv-python-headless",
+  "pdf2image",
+  "img2pdf",
+  "pytesseract",
+  "ocrmypdf",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pip-tools"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["docscan"]
